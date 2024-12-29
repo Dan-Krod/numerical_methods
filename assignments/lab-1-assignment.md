@@ -1,58 +1,69 @@
-# Gaussian Elimination with Partial Pivoting 
+# Direct and Iterative Methods for Solving Systems of Linear Algebraic Equations
+### Objective:  
+Study the most common direct and iterative methods for solving systems of linear algebraic equations, as well as their application for calculating determinants and matrix rotations.
 
-### Objective:
-To understand and apply the Gaussian Elimination method with partial pivoting for solving systems of linear algebraic equations (SLAE), computing determinants, and inverting matrices.
+### Theoretical Information:
 
----
+1. **Overview of Methods for Solving Systems of Linear Algebraic Equations:**
+   Numerical methods in linear algebra include methods for solving systems of linear algebraic equations, matrix rotations, determinant calculations, and finding eigenvalues and eigenvectors of matrices. This task focuses on solving systems of linear equations and indirectly addresses matrix rotation and determinant calculation.
 
-### Task:
-**Compute the determinant of a matrix using the Gaussian Elimination method with partial pivoting (column-based).**
+2. **Gaussian Method:**
+   The Gaussian method involves sequential elimination of unknowns, transforming the system of equations into an equivalent system with an upper triangular matrix, simplifying the solution process.
 
----
-
-### Key Concepts:
-1. **Numerical Methods in Linear Algebra:**
-   - Numerical methods provide computational solutions to linear algebra problems, including solving SLAEs, matrix inversion, determinant computation, and eigenvalue calculations.
-
-2. **Gaussian Elimination:**
-   - A sequential method of eliminating unknowns, transforming a given system into an equivalent system with an upper triangular matrix. This simplifies solving the equations.
-
-3. **Partial Pivoting:**
-   - To ensure numerical stability, rows are swapped such that the largest absolute value in the column being processed is positioned as the pivot (diagonal element).
-   - Enhances precision and avoids division by zero or near-zero values.
+3. **Gaussian Method with Pivoting:**
+   A problem with the basic Gaussian method occurs when the leading element is zero or close to zero, which complicates division. The Gaussian method with pivoting addresses this by sorting columns at each step, selecting the largest absolute element for computation.
 
 ---
 
-### Algorithm Overview:
+## Task #6: Determinant Calculation Using Gaussian Method with Pivoting
+
+**Algorithm:**
+1. The determinant is initialized to 1, and a copy of the matrix is made for modification.
+2. At each step of the algorithm:
+   - Select the pivot element in the current column.
+   - Swap rows if necessary.
+   - Normalize the row for element calculations.
+   - Eliminate elements below the pivot element.
+3. After the algorithm completes, the determinant is calculated as the product of the diagonal elements, accounting for sign changes due to row swaps.
+
+### Recommendations for Implementation:
+
 1. **Initialization:**
-   - Assign the initial determinant value as 1.
-   - Copy the matrix to preserve the original data.
-   
-2. **Column-wise Processing:**
-   - Identify the pivot element (largest absolute value in the current column).
-   - Swap rows if necessary, adjusting the determinant's sign accordingly.
-   - Normalize the pivot row by dividing elements to simplify further steps.
-   - Eliminate non-zero elements below the pivot by subtracting appropriately scaled pivot rows.
+   - Set the determinant to 1.
+   - Use a numeric array or matrix library like NumPy to ensure precise mathematical operations.
+   - Determine the size of the matrix for iteration purposes.
 
-3. **Result Extraction:**
-   - After processing all columns, the determinant is the product of all diagonal elements of the upper triangular matrix, considering sign changes due to row swaps.
+2. **Iteration Through Each Column:**
+   - For each column, find the pivot element (the element with the largest absolute value in the column).
+   - If the pivot element is not in the current row, perform row swapping to place the largest element in the current row.
+   - Normalize the current row and eliminate elements below the pivot by subtracting appropriate multiples of the pivot row from the other rows.
 
+3. **Completion:**
+   - After processing all columns, calculate the determinant as the product of the diagonal elements.
+   - Consider any sign changes due to row swaps, as they affect the determinant value.
+
+### Input Data:
+
+The matrix for calculating the determinant will be as follows, with the variables s, k, and p as specified:
+
+```python
+
+s = 0.02 * k  # where k is the task number
+p = group_number  # where group_number is the group number
+A = [
+    [8.3, 2.62 + s, 4.1, 1.9],
+    [3.92, 8.45, 7.78 - s, 2.46],
+    [3.77, 7.21 + s, 8.04, 2.28],
+    [2.21, 3.65 - s, 1.69, 6.69]
+]
+```
+
+### Expected Output:
+
+After applying the Gaussian method with pivoting, the determinant can be calculated, and the result might be displayed like this:
+
+```python
+determinant = gaussian_method(A)
+print(f"The determinant of the matrix = {determinant}")
+```
 ---
-
-### Recommendations:
-- **Implementation Language:**
-  - Use Python with NumPy or any programming language that supports matrix manipulation for efficient computation.
-  
-- **Code Structuring:**
-  - Modularize the algorithm into functions for pivoting, row elimination, and determinant calculation to enhance readability and maintainability.
-
-- **Testing:**
-  - Validate the implementation with small matrices (e.g., 2x2 or 3x3) before scaling up to larger matrices.
-  - Compare results against built-in determinant functions in libraries like NumPy for accuracy.
-
-- **Edge Cases:**
-  - Ensure proper handling of singular matrices (determinant = 0).
-  - Test matrices with negative and fractional elements for robustness.
-
-- **Visualization:**
-  - For educational purposes, consider visualizing each step of the algorithm to better understand how the matrix transforms into its triangular form.
