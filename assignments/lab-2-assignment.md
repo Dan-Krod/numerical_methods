@@ -80,7 +80,7 @@ The input data is as follows:
 def f(x):
     return x**3 + x - 3
 ```
-> **⚠️ Note:** More detailed input data can be found in the `input_date` folder, specifically in the `input_date(lab-2)` file.
+> **⚠️ Note:** More detailed input data can be found in the `input_data` folder, specifically in the `input_data(lab-2)` file.
 
 ### Expected Output:
 The found root is approximately: ```1.2134101046643253```
