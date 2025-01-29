@@ -69,7 +69,7 @@ The input data will be:
 - ```n = 2 * q - 1```
 - ```x_initial = [0.1, 0.1]```
   
-> **⚠️ Note:** More detailed input data can be found in the `input_date` folder, specifically in the `input_date(lab-3)` file.
+> **⚠️ Note:** More detailed input data can be found in the `input_data` folder, specifically in the `input_data(lab-3)` file.
 
 #### Function Definitions:
 ```python
