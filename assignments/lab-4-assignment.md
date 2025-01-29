@@ -33,11 +33,11 @@ In this simplest case, the small curvilinear figures are replaced by ordinary re
 ### Algorithm
 
 1. **Initialization**: 
-    - Set the values of the lower and upper integration limits \( a \) and \( b \), and the number of partitions \( n \).
+    - Set the values of the lower and upper integration limits ```a``` and ```b```, and the number of partitions ```n```.
 2. **Calculate Step Size**: 
-    - Compute the step size \( h \) for moving across the interval. The initial value for \( x \) is the first point after the lower limit since we use the method of right rectangles.
+    - Compute the step size ```h``` for moving across the interval. The initial value for ```x``` is the first point after the lower limit since we use the method of right rectangles.
 3. **Integration Loop**: 
-    - In a loop, for each step, add the function value at the current point to the sum. After each iteration, increase the value of \( x \) by the calculated step.
+    - In a loop, for each step, add the function value at the current point to the sum. After each iteration, increase the value of ```x``` by the calculated step.
 4. **Obtain Approximate Integral**: 
     - After the loop, multiply the accumulated sum by the step size to obtain the approximate value of the integral.
 5. **Verification**: 
@@ -66,7 +66,7 @@ intervals = 30
 def antiderivative(x):
     return (math.exp(3 * x) * (3 * x - 1)) / 9
 ```
-> **⚠️ Note:** More detailed input data can be found in the `input_date` folder, specifically in the `input_date(lab-4)` file.
+> **⚠️ Note:** More detailed input data can be found in the `input_data` folder, specifically in the `input_data(lab-4)` file.
 
 ### Expected Output
 - Integral using the right rectangles method: ```233.03051072877489```
