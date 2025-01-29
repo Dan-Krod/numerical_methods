@@ -89,7 +89,7 @@ a = 0.009
 T = 2 * a
 u1_amp = 10
 ```
-> **⚠️ Note:** More detailed input data can be found in the `input_date` folder, specifically in the `input_date(lab-6)` file.
+> **⚠️ Note:** More detailed input data can be found in the `input_data` folder, specifically in the `input_data(lab-6)` file.
 
 ### Expected Output  
 The output data consists of generated **graphs** based on the input parameters.  
