@@ -78,7 +78,7 @@ C1 = 300e-6
 t_max = 0.2  
 h = 0.00001  
 ```
-> **⚠️ Note:** More detailed input data can be found in the `input_date` folder, specifically in the `input_date(lab-5)` file.
+> **⚠️ Note:** More detailed input data can be found in the `input_data` folder, specifically in the `input_data(lab-5)` file.
 
 ### Expected Output  
 The output data consists of generated **graphs** based on the input parameters.  
