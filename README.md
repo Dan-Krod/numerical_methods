@@ -12,7 +12,7 @@ This repository contains 6 lab assignments for the Numerical Methods course. The
   - `lab-4-assignment.md`
   - `lab-5-assignment.md`
   - `complex-lab-assignment.md`
-```
+
 - `code-solutions/`: Contains the Python code solutions for each lab.
   - `lab-1-code.py`
   - `lab-2-code.py`
@@ -20,20 +20,19 @@ This repository contains 6 lab assignments for the Numerical Methods course. The
   - `lab-4-code.py`
   - `lab-5-code.py`
   - `complex-lab-code.py`
-```
+
 - `input_data/`: Contains the input data files for labs 2 through 6.
   - `input_data(lab-2).jpg`
   - `input_data(lab-3).jpg`
   - `input_data(lab-4).jpg`
   - `input_data(lab-5).jpg`
   - `input_data(lab-6).jpg`
-```
+
 - `output_data/`: Contains the output data files for labs 5 and 6.
   - `output_data(lab-5).jpg`
   - `output_data(1)(lab-6).jpg`
   - `output_data(2)(lab-6).jpg`
   - `output_data(3)(lab-6).jpg`
-```
 
 ## Lab Assignments
 ### Lab 1: Direct and Iterative Methods for Solving Systems of Linear Algebraic Equations
@@ -80,4 +79,4 @@ This repository contains 6 lab assignments for the Numerical Methods course. The
 This project is licensed under the License of Lviv Polytechnic National University. For more information, see the [LICENSE](LICENSE) file.
 
 ### Acknowledgments
-Special thanks to the faculty and staff at Lviv Polytechnic National University for their guidance and support in the development of these lab assignments. Their dedication to providing high-quality education has made this project possible.
+`Special thanks to the faculty and staff at Lviv Polytechnic National University for their guidance and support in the development of these lab assignments. Their dedication to providing high-quality education has made this project possible.`
